@@ -1,0 +1,68 @@
+
+public class ListaEncadeada
+{
+
+    private Nodo inicio ;
+    private Nodo fim ;
+    private int quantos ;
+    private int capacidade;
+
+    public ListaEncadeada(int capacidade)
+    {
+        this.capacidade = capacidade  ;        
+    }
+
+    public ListaEncadeada()
+    {
+        this.capacidade = 100  ;
+    }
+
+    public int getCapacidade()
+    {
+        return capacidade ;
+    }
+
+    public int incluirJogador(Jogador umJogador) 
+    {
+        
+            Nodo temp = new Nodo() ;
+            temp.setInfo(umJogador);
+            if(quantos==0)
+            {
+                inicio=fim=temp;
+                
+            }
+            else if(quantos<=capacidade)
+            {
+                fim.setProx(temp);
+                fim = temp ;
+            }
+            quantos++;
+            return 2;
+        
+    }
+
+    
+    public int getTamanho()
+    {
+        return quantos ;
+    }
+
+    public Jogador get(int indice)
+    {
+        Jogador n;
+        if((indice>=0) && (indice<quantos))
+        {        
+            Nodo temp = inicio;
+            for(int i=0 ; i<indice ; i++)
+            {
+                temp = temp.getProx();
+            }
+            n= temp.getInfo();
+            return n;
+        }
+        return null;
+    }
+
+    
+}
