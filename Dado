@@ -1,0 +1,121 @@
+
+/**
+ * Classe dado.
+ * 
+ * @Maurício Zalamena Bavaresco 
+ * @2.0.1.8
+ */
+import java.util.Random;
+public class Dado
+{
+    // private int[] dados = new int[5];
+    //Jogar
+    Random gerador = new Random();
+    private  int dado1;
+    private  int dado2;
+    private  int dado3;
+    private  int dado4;
+    private  int dado5;
+    private  int[] dados;
+    public Dado()
+    {
+        this.dado1=dado1;
+        this.dado2=dado2;
+        this.dado3=dado3;
+        this.dado4=dado4;
+        this.dado5=dado5;
+        this.dados=new int[5]; 
+    }
+    public Dado(int l,int n, int m, int a, int w)
+    {
+        dados[1]=l;
+        dados[2]=n;
+        dados[3]=m;
+        dados[4]=a;
+        dados[5]=w;
+    }
+    public void JogarTodos()
+    {
+        dado1=gerador.nextInt(5)+1;
+        dado2=gerador.nextInt(5)+1;
+        dado3=gerador.nextInt(5)+1;
+        dado4=gerador.nextInt(5)+1;
+        dado5=gerador.nextInt(5)+1;
+        Dado vetorDeDados = new Dado(dado1,dado2,dado3,dado4,dado5);
+    }
+    
+    public void JogarTresDados(int dado1, int dado2, int dado3)
+    {
+        dado1=gerador.nextInt(5)+1;
+        dado2=gerador.nextInt(5)+1;
+        dado3=gerador.nextInt(5)+1;
+    }
+     
+    public void JogarDoisDados(int dado1, int dado2, int dado3)
+    {
+        dado1=gerador.nextInt(5)+1;
+        dado2=gerador.nextInt(5)+1;
+        
+    }
+    
+    public void JogarUmDado(int dado1, int dado2, int dado3)
+    {
+        dado1=gerador.nextInt(5)+1;
+        
+    }
+    
+    
+    
+    
+    public int verificarResultado(){ 
+        return dado1 + dado2 + dado3 + dado4 + dado5; 
+    } 
+
+    
+    
+    
+    
+    public int getDado1() {
+        return dado1;
+    }
+
+    public void setDado1(int dado1) {
+        this.dado1 = dado1;
+    }
+
+    public int getDado2() {
+        return dado2;
+    }
+
+    public void setDado2(int dado2) {
+        this.dado2 = dado2;
+    }
+
+    public int getDado3() {
+        return dado3;
+    }
+
+    public void setDado3(int dado3) {
+        this.dado3 = dado3;
+    }
+
+    public int getDado4() {
+        return dado4;
+    }
+
+    public void setDado4(int dado4) {
+        this.dado4 = dado4;
+    }
+
+    public int getDado5() {
+        return dado5;
+    }
+
+    public void setDado5(int dado5) {
+        this.dado5 = dado5;
+    }
+
+    //escolher
+    //Pontuação
+
+}
