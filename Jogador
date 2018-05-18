@@ -1,0 +1,81 @@
+
+/**
+ * Escreva a descrição da classe Jogador aqui.
+ * 
+ * @author (seu nome) 
+ * @version (número de versão ou data)
+ */
+/*Para cada jogador, além de dados de identificação, deve-se manter também informações sobre o número de jogos em que participou, 
+ * o número de vitórias e de empates obtidos.
+
+O jogo deve oferecer a opção de apresentar os jogadores nas 3 primeiras posições em número de vitórias (os números de jogos e de
+empates devem ser usados como critério de desempate quando os jogadores têm o mesmo número de vitórias)
+ */
+public class Jogador
+{
+    private String nome;
+    private int numJogos;
+    private int numWin;
+    private int empates;
+    private int pontos;
+    private int derrotas;
+    
+    
+    
+    public Jogador()
+    {
+        this.nome=nome;
+        this.numJogos=0;
+        this.numWin=0;
+        this.empates=0;
+        this.pontos=0;
+    }
+    
+    public Jogador(String Nome,int NumJogos,int numVit,int Empates )
+    {
+        this.nome=Nome;
+        this.numJogos=NumJogos;
+        this.numWin=numVit;
+        this.empates=Empates;
+    }
+    public int getDerrotas()
+    {
+        return derrotas;
+    }
+    public int getPontos()
+    {
+        return pontos;
+    }
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getNumJogos() {
+        return numJogos;
+    }
+
+    public void setNumJogos(int numJogos) {
+        this.numJogos = numJogos;
+    }
+
+    public int getNumWin() {
+        return numWin;
+    }
+
+    public void setNumWin(int numWin) {
+        this.numWin = numWin;
+    }
+
+    public int getEmpates() {
+        return empates;
+    }
+
+    public void setEmpates(int empates) {
+        this.empates = empates;
+    }
+
+}
