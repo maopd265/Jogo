@@ -1,0 +1,82 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
+/**
+ * Escreva a descrição da classe Menu aqui.
+ * 
+ * @author (seu nome) 
+ * @version (número de versão ou data)
+ */
+public class Menu
+{
+    private int qnts=0;
+    public void menuPrincipal()
+    {
+        Scanner entrada= new Scanner(System.in);
+        int opcao;
+        ListaEncadeada listaJogadores= new ListaEncadeada();
+        do{
+            System.out.println("------------------------General------------------------");
+            System.out.println("1- Cadastro de jogador");
+            System.out.println("2-Jogar");
+            System.out.println("3-Ver pontuação da partida");
+            System.out.println("4-Ver pontuação geral");
+            System.out.println("5-Sair");
+            opcao=entrada.nextInt();
+            switch(opcao)
+            {
+                case 1: 
+                System.out.println("---------------CADASTRO DE JOGADOR----------------");
+                System.out.println("Digite o nome do jogador:");
+                Jogador player = new Jogador();
+                player.setNome(entrada.nextLine());
+                entrada.nextLine();
+                listaJogadores.incluirJogador(player);
+     
+                
+                //inserir na lista encadeada e verificar 
+                break;
+                //
+                case 2:
+                System.out.println("----------------JOGAR----------------");
+                System.out.println("Jogador 1:");
+                String player1,player2;
+                player1=entrada.nextLine();
+                //verificar a existencia do player
+                System.out.println("Jogador 2:");
+                player2=entrada.nextLine();
+                //verificar
+                break;
+                //
+                case 3: 
+                System.out.println("----------------PONTUAÇÃO DA PARTIDA----------------");
+                break;
+                //
+                case 4:
+                System.out.println("----------------PONTUAÇÃO GERAL----------------");
+                System.out.println("Jogador | Numero de jogos | Numero de vitórias | Empates | Pontos | Derrotas |");
+                int i;
+                for(i=0;i<listaJogadores.getTamanho();i++)
+                {
+                    System.out.println(""+listaJogadores.get(i).getNome()+"|"+listaJogadores.get(i).getNumJogos()+"|"+listaJogadores.get(i).getNumWin()+"|"+listaJogadores.get(i).getEmpates()+" | "+listaJogadores.get(i).getPontos()+"|"+listaJogadores.get(i).getDerrotas());                              
+                }
+
+                System.out.println("");
+
+                break;
+                //
+                case 5: 
+                System.out.println("SAINDO DO PROGRAMA...");
+                break;
+
+                //teste
+                case 6: 
+                
+                System.out.println(listaJogadores.get(0).getNome());
+                break;
+                //  
+
+            }
+        }while(opcao!=5);
+    }
+}
