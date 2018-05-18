@@ -1,0 +1,41 @@
+
+/**
+ * Escreva a descrição da classe Nodo aqui.
+ * 
+ * @author (seu nome) 
+ * @version (número de versão ou data)
+ */
+public class Nodo
+{
+
+    private Jogador info;
+    private Nodo prox;
+    public Nodo()
+    {
+        this.info=info;
+        this.prox=prox;
+    }
+
+    public Nodo(Jogador info)
+    {
+        this.info = info ;
+    }
+
+    public Jogador getInfo() {
+        return info;
+    }
+
+    public void setInfo(Jogador info) {
+        this.info = info;
+    }
+
+    public Nodo getProx() {
+        return prox;
+    }
+
+    public void setProx(Nodo prox) {
+        this.prox = prox;
+    }
+}
+
+
