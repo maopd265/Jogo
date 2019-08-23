@@ -62,6 +62,5 @@ Jogabilidade
 O jogo deve possibilitar o enfrentamento entre 2 jogadores em uma única rodada (com três lançamentos para cada jogador)
 Vence quem obtiver o maior número de pontos.
 
-Entrega
 
-O trabalho é individual e deve ser postado no Webfólio até a data do fechamento da pasta.*/
+
